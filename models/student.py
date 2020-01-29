@@ -1,6 +1,8 @@
-from main import db, ma
+if __name__ == '__main__':
+    from main import db, ma
 
 
+# child table
 class Student(db.Model):
     student_id = db.Column(db.Integer, primary_key=True)
     roll_number = db.Column(db.String(50), nullable=False, unique=True)

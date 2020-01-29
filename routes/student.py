@@ -1,10 +1,13 @@
-from main import app
-from flask import jsonify, request
+from flask import jsonify, request, Blueprint
+
+if __name__ == '__main__':
+    from models.address import Address
+
+blueprint_student = Blueprint("blueprint_student", __name__)
 
 
-@app.route("/student", methods=["POST"])
+@blueprint_student.route("/student", methods=["POST"])
 def add_student():
     data = request.get_json()
-    if data is not None:
-        pass
-# return jsonify({"response": "added"})
+    print(data)
+    return jsonify({"result": "student added successfully"})

@@ -1,6 +1,8 @@
-from main import db, ma
+if __name__ == '__main__':
+    from main import db, ma
 
 
+# parent table
 class Address(db.Model):
     address_id = db.Column(db.Integer, primary_key=True)
     house_number = db.Column(db.String(50), nullable=False)

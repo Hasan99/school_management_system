@@ -12,7 +12,7 @@ class_section = db.Table("class_section",
 # parent table
 class Class(db.Model):
     class_id = db.Column(db.Integer, primary_key=True)
-    class_name = db.Column(db.String(100), nullable=False, unique=True)
+    class_name = db.Column(db.String(100), nullable=False)
     sections = db.relationship("Section", secondary=class_section, backref="classes")
 
     def __init__(self, class_name):

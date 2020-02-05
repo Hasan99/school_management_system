@@ -5,7 +5,7 @@ if __name__ == '__main__':
 # parent table
 class Role(db.Model):
     role_id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
+    name = db.Column(db.String(100), nullable=False, unique=True)
     users = db.relationship("User", backref="role")
 
     def __init__(self, name):

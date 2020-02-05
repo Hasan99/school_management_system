@@ -12,21 +12,20 @@ student_schema = {
 
     # person object
     "person_name": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
-                    "empty": False},
+                    "empty": False, "regex": "^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$"},
     "father_name": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
-                    "empty": False},
+                    "empty": False, "regex": "^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$"},
     "gender": {"type": "string", "minlength": 4, "maxlength": 10, "required": True, "nullable": False,
                "empty": False},
-    "date_of_birth": {"type": "string", "minlength": 10, "maxlength": 10, "required": True, "nullable": False,
-                      "empty": False},
+    "date_of_birth": {"type": "date", "required": True, "nullable": False},
     "b_form_cnic": {"type": "string", "minlength": 10, "maxlength": 50, "required": True, "nullable": False,
                     "empty": False},
 
     # parent object
     "father_guardian": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
-                        "empty": False},
+                        "empty": False, "regex": "^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$"},
     "mother_name": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
-                    "empty": False},
+                    "empty": False, "regex": "^([a-z]+[,.]?[ ]?|[a-z]+['-]?)+$"},
     "occupation": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
                    "empty": False},
     "income": {"type": "float", "min": 0, "required": True, "nullable": False},
@@ -39,5 +38,5 @@ student_schema = {
     "class_name": {"type": "string", "maxlength": 100, "required": True, "nullable": False, "empty": False},
 
     # section object
-    "section_name": {"type": "string", "maxlength": 100, "empty": False}
+    "section_name": {"type": "string", "maxlength": 100, "required": True, "nullable": False, "empty": False}
 }

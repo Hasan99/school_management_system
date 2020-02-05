@@ -5,7 +5,7 @@ if __name__ == '__main__':
 # parent table
 class Section(db.Model):
     section_id = db.Column(db.Ineteger, primary_key=True)
-    section_name = db.Column(db.String(100), unique=True)
+    section_name = db.Column(db.String(100), nullable=False, unique=True)
 
     def __init__(self, section_name):
         self.section_name = section_name

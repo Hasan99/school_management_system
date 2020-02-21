@@ -1,12 +1,13 @@
-if __name__ == '__main__':
-    from main import db, ma
+from app import db, ma
 
 
 # parent table
 class Role(db.Model):
+    __tablename__ = "role"
     role_id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False, unique=True)
-    users = db.relationship("User", backref="role")
+
+    # user = db.relationship("User", back_populates="role")
 
     def __init__(self, name):
         self.name = name

@@ -5,9 +5,6 @@ student_schema = {
     "province_state": {"type": "string", "maxlength": 50, "required": True, "nullable": False, "empty": False},
     "country": {"type": "string", "maxlength": 50, "required": True, "nullable": False, "empty": False},
 
-    # branch object
-    "branch_id": {"type": "integer", "min": 1, "required": True, "nullable": False},
-
     # person object
     "person_name": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
                     "empty": False, "regex": "^[a-zA-Z]{2,20}([ .'a-zA-Z])*[a-zA-Z]+$"},
@@ -16,6 +13,7 @@ student_schema = {
     "date_of_birth": {"type": "string", "required": True, "nullable": False, "empty": False},
     "b_form_cnic": {"type": "string", "minlength": 10, "maxlength": 50, "required": True, "nullable": False,
                     "empty": False},
+    "branch_id": {"type": "integer", "min": 1, "required": True, "nullable": False},
 
     # class object
     "class_id": {"type": "integer", "min": 1, "required": True, "nullable": False},
@@ -29,6 +27,8 @@ parent_schema = {
                         "empty": False, "regex": "^[a-zA-Z]{2,20}([ .'a-zA-Z])*[a-zA-Z]+$"},
     "mother_name": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
                     "empty": False, "regex": "^[a-zA-Z]{2,20}([ .'a-zA-Z])*[a-zA-Z]+$"},
+    "parent_cnic": {"type": "string", "minlength": 10, "maxlength": 50, "required": True, "nullable": False,
+                    "empty": False},
     "occupation": {"type": "string", "minlength": 3, "maxlength": 100, "required": True, "nullable": False,
                    "empty": False},
     "income": {"type": "float", "min": 0, "required": True, "nullable": False},

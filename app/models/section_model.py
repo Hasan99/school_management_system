@@ -7,8 +7,6 @@ class Section(db.Model):
     section_id = db.Column(db.Integer, primary_key=True)
     section_name = db.Column(db.String(100), nullable=False, unique=True)
 
-    # Class = db.relationship("Class", back_populates="section")
-
     def __init__(self, section_name):
         self.section_name = section_name
 

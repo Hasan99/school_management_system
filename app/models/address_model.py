@@ -9,8 +9,6 @@ class Address(db.Model):
     city = db.Column(db.String(50), nullable=False)
     province_state = db.Column(db.String(50), nullable=False)
     country = db.Column(db.String(50), nullable=False)
-    # person = db.relationship("Person", back_populates="address")
-    # branch = db.relationship("Branch", back_populates="address")
 
     def __init__(self, home_address, city, province_state, country):
         self.home_address = home_address

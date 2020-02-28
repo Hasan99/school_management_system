@@ -4,7 +4,7 @@ class_section = db.Table("class_section",
                          db.Column("class_id", db.Integer, db.ForeignKey("class.class_id"), nullable=False),
                          db.Column("section_id", db.Integer, db.ForeignKey("section.section_id"), nullable=False),
                          db.Column("student_id", db.Integer, db.ForeignKey("student.student_id"), nullable=False),
-                         db.Column("year_of_passing", db.String(30), default="not available")
+                         db.Column("year_of_passing", db.String(30))
                          )
 
 

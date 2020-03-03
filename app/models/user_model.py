@@ -8,7 +8,7 @@ class User(db.Model):
     username = db.Column(db.String(20), nullable=False, unique=True)
     password_hash = db.Column(db.String(100), nullable=False)
     role_id = db.Column(db.Integer, db.ForeignKey("role.role_id"), nullable=False)
-    role = db.relationship("Role", backref="user")
+    role = db.relationship("Role", backref="users")
 
 
 class UserSchema(ma.ModelSchema):

@@ -9,9 +9,9 @@ class Student(db.Model):
     person_id = db.Column(db.Integer, db.ForeignKey("person.person_id"), nullable=False)
     branch_id = db.Column(db.Integer, db.ForeignKey("branch.branch_id"), nullable=False)
     parent_id = db.Column(db.Integer, db.ForeignKey("parent.parent_id"), nullable=False)
-    person = db.relationship("Person", backref="student")
-    branch = db.relationship("Branch", backref="student")
-    parent = db.relationship("Parent", backref="student")
+    person = db.relationship("Person", backref="students")
+    branch = db.relationship("Branch", backref="students")
+    parent = db.relationship("Parent", backref="students")
 
 
 class StudentSchema(ma.ModelSchema):

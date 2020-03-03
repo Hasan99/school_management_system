@@ -8,7 +8,7 @@ class Contact(db.Model):
     phone_number = db.Column(db.String(30), nullable=False, unique=True)
     email = db.Column(db.String(50), unique=True)
     person_id = db.Column(db.Integer, db.ForeignKey("person.person_id"), nullable=False)
-    person = db.relationship("Person", backref="contact")
+    person = db.relationship("Person", backref="contacts")
 
 
 class ContactSchema(ma.ModelSchema):

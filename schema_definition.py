@@ -36,7 +36,7 @@ parent_schema = {
     # "person_image": "Validated in Routes",
     # "address_id": "Inserted in Routes",
 
-    "branch_id": {"type": "integer", "min": 1, "required": True, "nullable": False},
+    "branch_id": {"type": "integer", "min": 1, "required": True, "nullable": False, "coerce": int},
 
     # parent object
     "mother_name": {"type": "string", "minlength": 3, "maxlength": 100, "empty": False,

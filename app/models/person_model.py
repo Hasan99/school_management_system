@@ -16,8 +16,8 @@ class Person(db.Model):
     person_image = db.Column(db.LargeBinary)
     address_id = db.Column(db.Integer, db.ForeignKey("address.address_id"), nullable=False)
     branch_id = db.Column(db.Integer, db.ForeignKey("branch.branch_id"))
-    address = db.relationship("Address", backref="person")
-    branch = db.relationship("Branch", backref="person")
+    address = db.relationship("Address", backref="persons")
+    branch = db.relationship("Branch", backref="persons")
 
 
 class PersonSchema(ma.ModelSchema):

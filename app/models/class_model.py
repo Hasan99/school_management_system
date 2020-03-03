@@ -13,7 +13,7 @@ class Class(db.Model):
     __tablename__ = "class"
     class_id = db.Column(db.Integer, primary_key=True)
     class_name = db.Column(db.String(100), nullable=False)
-    section = db.relationship("Section", secondary=class_section, backref="Class")
+    section = db.relationship("Section", secondary=class_section, backref="classes")
 
     def __init__(self, class_name):
         self.class_name = class_name

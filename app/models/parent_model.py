@@ -8,7 +8,7 @@ class Parent(db.Model):
     mother_name = db.Column(db.String(100))
     occupation = db.Column(db.String(100), nullable=False)
     person_id = db.Column(db.Integer, db.ForeignKey("person.person_id"), nullable=False)
-    person = db.relationship("Person", backref="parent")
+    person = db.relationship("Person", backref="parents")
 
 
 class ParentSchema(ma.ModelSchema):

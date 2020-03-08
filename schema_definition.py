@@ -30,8 +30,7 @@ parent_schema = {
                     "empty": False, "regex": "^[a-zA-Z0-9-_]+$"},
     "phone_number": {"type": "string", "maxlength": 20, "required": True, "nullable": False, "empty": False,
                      "regex": r"^((\+92)|(0092))-{0,1}\d{3}-{0,1}\d{7}$|^\d{11}$|^\d{4}-\d{7}$"},
-    "email": {"type": "string", "maxlength": 50, "empty": False,
-              "regex": r"^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"},
+    "email": {"type": "string", "maxlength": 50},
 
     # "person_image": "Validated in Routes",
     # "address_id": "Inserted in Routes",
